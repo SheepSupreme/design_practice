@@ -4,7 +4,9 @@ html {
 }
 
 body {
-    background-color: rgb(129, 159, 185)
+    background-color: rgb(129, 159, 185);
+    display: flex;
+    flex-direction: column;
 }
 
 * {
@@ -15,29 +17,32 @@ body {
 }
 
 .header {
-    height: 400px;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    animation-name: example;
+    animation-name: sunset;
     animation-duration: 4s;
-    animation-iteration-count: infinite;
 }
 
 @keyframes example {
-    0% {scale: 0.8;}
+    0% {
+        scale: 0.8;
+    }
     100% {
         scale: 1.6;
-        transform: translate(0,300px);
     }
 }
 
 .logo {
     display: flex;
-    height: auto;
-    width: auto;
+    height: 200px;
+    width: 200px;
     justify-content: center;
     align-items: center;
+    animation-name: example;
+    animation-duration: 4s;
+    scale: 1.6
 }
 
 /*BOAT CONTAINER*/
@@ -170,13 +175,11 @@ body {
 .sunset {
     display: flex;
     justify-content: center;
-    position: absolute;
+    position: relative;
     width: 100vw;
     height: 400px;
-    z-index: 40;
     animation-name: sunset;
     animation-duration: 4s;
-    animation-iteration-count: infinite;
 }
 
 .sun {
@@ -198,6 +201,6 @@ body {
 }
 
 @keyframes sunset {
-    from {transform: translate(0,-700px);}
-    to {transform: translate(0,-400px);}
+    from {transform: translate(0,-330px);}
+    to {transform: translate(0,0);}
 }
